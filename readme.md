@@ -1,6 +1,6 @@
 Corita is an interactive-text-transformer-based professor, trained on the oral histories of the visual artist and professor [Corita Kent](https://en.wikipedia.org/wiki/Corita_Kent). Corita was developped for the semester project « [Libérer les énérgies créatrices](http://esaaix.fr/IMG/pdf/esaaix_livret__2019_2020__fevrier2_web_.pdf) » (p.30) at the [École supérieure d'art d'Aix-en-Provence](http://ecole-art-aix.fr).
 
-The project is best run on a Chrome browser, because of the use of the Web Audio API.
+The project is best run on a Chrome browser, due to the use of the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API).
 
 - - - -
 
@@ -31,7 +31,7 @@ Or,
 
 - - - -
 
-To run [GPT-2](https://openai.com/blog/better-language-models/), you will need to build the `corita` model (cf. `gpt/models/corita`) as the current required file `model-2149.data-00000-of-00001` is [too large for github current restrictions on filesize](https://help.github.com/en/github/managing-large-files/conditions-for-large-files). To train your own gpt-2 model cf.
+To run [GPT-2](https://openai.com/blog/better-language-models/), you will need to build the `corita` model (cf. `gpt/models/corita`) as the current required file `model-2149.data-00000-of-00001` is [too large for current github restrictions on filesize](https://help.github.com/en/github/managing-large-files/conditions-for-large-files). To train your own gpt-2 model cf.
 
 - [Beginner’s Guide to Retrain GPT-2 (117M) to Generate Custom Text Content](https://medium.com/@ngwaifoong92/beginners-guide-to-retrain-gpt-2-117m-to-generate-custom-text-content-8bb5363d8b7f) by [Ng Wai Foong](https://medium.com/@ngwaifoong92)
 - [GPT-2 Neural Network Poetry](https://www.gwern.net/GPT-2) by [Gwern Branwen](https://www.gwern.net/).
@@ -61,10 +61,10 @@ To test the current training state:
 When you are done training, copy the following files:
 
 ```
-gtp2/checkpoint/run1/checkpoint
-gtp2/checkpoint/run1/model-####.data-00000-of-00001
-gtp2/checkpoint/run1/model-####.index
-gtp2/checkpoint/run1/model-####.meta
+gpt2/checkpoint/run1/checkpoint
+gpt2/checkpoint/run1/model-####.data-00000-of-00001
+gpt2/checkpoint/run1/model-####.index
+gpt2/checkpoint/run1/model-####.meta
 ```
 
 ...into the folder:
