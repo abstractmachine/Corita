@@ -2,23 +2,7 @@ Corita is an interactive-text-transformer-based professor, trained on the oral h
 
 The project is best run on a Chrome browser, because of the use of the Web Audio API.
 
-The project uses the following technologies
-
-# Interaction
-- [P5.js](http://p5js.org)
-- [P5 Speech](https://idmnyu.github.io/p5.js-speech/)
-
-# Training
-- [GPT-2](https://openai.com/blog/better-language-models/)
-- [TensorFlow](https://www.tensorflow.org)
-- [Python](https://www.python.org/downloads/)
-
-# Web/Server
-- [Node](http://nodejs.org/)
-
-# Text (skeleton code only, cf. below)
-- [Twee](https://twinery.org/cookbook/terms/terms_twee.html)
-- [SugarCube](https://www.motoslave.net/sugarcube/2/docs/)
+- - - -
 
 The project relies heavily on research into using [GPT-2](https://openai.com/blog/better-language-models/) in a design context, as developped in collaboration with [Jürg Lehni](http://juerglehni.com), [Nicolas Baldran](https://www.hesge.ch/head/annuaire/nicolas-baldran), and the students of the [Media Design Master](https://www.hesge.ch/head/formations-recherche/master-en-media-design), [HEAD — Genève](https://www.hesge.ch/head/) for our project [Thinking Machines](https://github.com/abstractmachine/ThinkingMachines). For more information on the Thinking Machines project, see the conference "[Thinking Machines](http://www.anthonymasure.com/en/conferences/2020-01-thinking-machines-bal-paris)" by Anthony Masure and Alexia Mathieu.
 
@@ -92,3 +76,20 @@ gtp2/checkpoint/run1/model-####.meta
 - - - -
 
 The project currently contains a skeleton [Twee](https://twinery.org/cookbook/terms/terms_twee.html) project, configured with [SugarCube](https://www.motoslave.net/sugarcube/2/docs/) syntax. This project has not yet been hooked in with gpt-2. This Twee <> GPT-2 connection is currently in development for the [Pang Pang Club](http://pangpangclub.itch.io) in Aix-en-Provence.
+
+- - - -
+
+The project uses the following technologies:
+
+- Interaction
+	- [P5.js](http://p5js.org)
+	- [P5 Speech](https://idmnyu.github.io/p5.js-speech/)
+- Training
+	- [GPT-2](https://openai.com/blog/better-language-models/)
+	- [TensorFlow](https://www.tensorflow.org)
+	- [Python](https://www.python.org/downloads/)
+- Web/Server
+	- [Node](http://nodejs.org/)
+- Text
+	- [Twee](https://twinery.org/cookbook/terms/terms_twee.html)
+	- [SugarCube](https://www.motoslave.net/sugarcube/2/docs/)
