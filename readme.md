@@ -92,4 +92,5 @@ The project uses the following technologies:
 	- [Node](http://nodejs.org/)
 - Text
 	- [Twee](https://twinery.org/cookbook/terms/terms_twee.html)
+	- [Tweego](https://www.motoslave.net/tweego/)
 	- [SugarCube](https://www.motoslave.net/sugarcube/2/docs/)
