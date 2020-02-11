@@ -1,0 +1,22 @@
+body, #story, #passages {
+	margin: 0;
+	padding: 0;
+}
+
+#ui-bar {
+	display: none;
+}
+
+#story {
+	padding: 5em;
+}
+
+#passages {
+	max-width: inherit;
+}
+
+/* FONT STUFF */
+
+#story {
+	font-family: Courier, monospace;
+}

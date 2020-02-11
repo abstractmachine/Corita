@@ -1,0 +1,23 @@
+::StoryTitle
+Corita
+
+:: StoryData
+{
+        "ifid": "55451723-A27D-4AC9-A36C-40218CAC3383",
+		"format": "SugarCube",
+		"format-version": "2.30.0",
+		"start": "Start"
+}
+
+::Start
+[
+	<<set $response to "">>
+	<<set $question to "">>
+]
+
+
+::Started
+[
+	<<set $question to "So tell me Corita, when did you start printmaking?">>
+	<<run askQuestion()>>
+]
