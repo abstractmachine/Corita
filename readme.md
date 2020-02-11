@@ -6,42 +6,60 @@ The original Node server code and configuration files were written by [Jürg Leh
 
 See the `package.json` file for [node](http://nodejs.org/)/npm requirements:
 
+```
 > cd Corita
 > npm install
+```
 
 To start the Node server:
 
+```
 > cd Corita
 > npm run dev
+```
 
 Or,
 
+```
 > cd Corita
 > npm run start
+```
 
-To run gpt-2, you will need to build the `corita` model (cf. `gpt/models/corita`) as the current required file `model-2149.data-00000-of-00001` is [too large for github current restrictions on filesize](https://help.github.com/en/github/managing-large-files/conditions-for-large-files). To train your own gpt-2 model cf. [Beginner’s Guide to Retrain GPT-2 (117M) to Generate Custom Text Content](https://medium.com/@ngwaifoong92/beginners-guide-to-retrain-gpt-2-117m-to-generate-custom-text-content-8bb5363d8b7f) by [Ng Wai Foong](https://medium.com/@ngwaifoong92) and [GPT-2 Neural Network Poetry](https://www.gwern.net/GPT-2) by [Gwern Branwen](https://www.gwern.net/).
+To run [gpt-2](https://openai.com/blog/better-language-models/), you will need to build the `corita` model (cf. `gpt/models/corita`) as the current required file `model-2149.data-00000-of-00001` is [too large for github current restrictions on filesize](https://help.github.com/en/github/managing-large-files/conditions-for-large-files). To train your own gpt-2 model cf. [Beginner’s Guide to Retrain GPT-2 (117M) to Generate Custom Text Content](https://medium.com/@ngwaifoong92/beginners-guide-to-retrain-gpt-2-117m-to-generate-custom-text-content-8bb5363d8b7f) by [Ng Wai Foong](https://medium.com/@ngwaifoong92) and [GPT-2 Neural Network Poetry](https://www.gwern.net/GPT-2) by [Gwern Branwen](https://www.gwern.net/).
+
+To train with [gpt-2](https://openai.com/blog/better-language-models/), you will need to install [Python](https://www.python.org/downloads/) and [TensorFlow](https://www.tensorflow.org). This project currently uses `python 3.7.6` and `Tensorflow 1.13.1`.
 
 To train the current configuration:
 
+```
 > cd gpt2
 > python src/encode.py text/corita.txt text/corita.npz
 > python src/train.py --dataset text/corita.npz
+```
 
 Use `^c` to interrupt the training, and continue with:
 
+```
 > python src/train.py --dataset text/corita.npz
+```
 
 To test the current training state:
 
+```
 > src/interactive_conditional_samples.py --model_name corita --top_k 40 --temperature 0.8 --length 64
+```
 
 When you are done training, copy the following files:
 
+```
 gtp2/checkpoint/run1/checkpoint
 gtp2/checkpoint/run1/model-####.data-00000-of-00001
 gtp2/checkpoint/run1/model-####.index
 gtp2/checkpoint/run1/model-####.meta
+```
 
 ...into the folder:
 
+```
 > gpt2/models/corita/
+```
