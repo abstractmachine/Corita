@@ -7,8 +7,30 @@ html, body {
 }
 
 body.recording {
-	color: white;
-	background-color: red;
+	animation-name: pulse;
+	animation-iteration-count: infinite;
+	animation-duration: 3000ms;
+	animation-delay: 250ms;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+textarea, select, input, button { outline: none; }
+textarea { resize: none; }
+
+#typewriter {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 0;
+	background-color: transparent;
+	color: transparent;
+}
+
+#typewriter::selection {
+	background:transparent;
 }
 
 #instructions {
@@ -48,4 +70,21 @@ body.recording {
 	max-width: 60em;
 	font-family: Courier, monospace;
 }
+
+
+
+@keyframes pulse {
+	0% {
+	  background-color: white;
+	  color: black;
+	}
+	50% {
+	  background-color: red;
+	  color: white;
+	}
+	100% {
+	  background-color: white;
+	  color: black;
+	}
+  }
 

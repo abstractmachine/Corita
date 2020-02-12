@@ -12,9 +12,16 @@
 <body>
 
 	<div id="interview">
-		<div id="question"><p>Interviewer: …</p></div>
-		<div id="response"><p>Corita: …</p></div>
-		<div id="instructions"><p>Click to record &lpar;or type to write&rpar; a new question.</p></div>
+		<div id="question">
+			<p>Click to start</p>
+		</div>
+		<div id="response">
+			<p></p>
+		</div>
+		<div id="instructions">
+			<p>Click to record &lpar;or type to write&rpar; a new question.</p>
+		</div>
+		<textarea id="typewriter" spellcheck="false"></textarea>
 	</div>
 	<!-- <div id="twee_div" style="display:none;"><iframe id="twee_frame" src="twee.html"></iframe></div> -->
 
@@ -27,9 +34,9 @@
 	<script src="p5/sketch.js"></script>
 
 	<!-- Socket.io stuff -->
-  <script src="lib/socket.io.js"></script>
-  <script src="scripts/corita.js"></script>
-  <script src="scripts/gpt2.js"></script>
+	<script src="lib/socket.io.js"></script>
+	<script src="scripts/corita.js"></script>
+	<script src="scripts/gpt2.js"></script>
 
 </body>
 

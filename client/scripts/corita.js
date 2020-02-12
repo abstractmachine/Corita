@@ -1,12 +1,41 @@
-
+let firstClick = true
 document.body.addEventListener('click', function () {
 
 	// turn on speech engine, if necessary
 	setupSpeech()
+	// erase current texts
+	document.getElementById("question").getElementsByTagName("p")[0].textContent = "Interviewer: …"
+	document.getElementById("response").getElementsByTagName("p")[0].textContent = "Corita: …"
+
+	if (firstClick) {
+		firstClick = false
+		return
+	}
 	// start recording speech
 	speechRecordStart()
 
 })
+
+
+let eraseTypewriter = false
+let lastLength = 0
+
+var typewriter = document.getElementById("typewriter")
+if (typewriter.addEventListener) {
+	typewriter.addEventListener('input', function () {
+
+		if (eraseTypewriter && typewriter.value.length < lastLength) {
+			typewriter.value = ""
+			eraseTypewriter = false
+		}
+
+		let output = "Interviewer: " + typewriter.value
+		document.getElementById("question").getElementsByTagName("p")[0].textContent = output
+
+		lastLength = typewriter.value.length
+
+	}, false);
+}
 
 
 let keyString = ""
@@ -17,23 +46,23 @@ document.body.addEventListener('keypress', e => {
 
 	if (e.keyCode == 13) {
 
-		questionString = keyString
+		questionString = typewriter.value
 		changeState("asked")
 		document.getElementById("response").getElementsByTagName("p")[0].textContent = "Corita: …"
 		keyString = ""
-
-	} else if (e.keyCode == 3) {
-
+		eraseTypewriter = true
 
 	} else {
 
-		keyString += e.key;
-		let output = "Interviewer: " + keyString
-		document.getElementById("question").getElementsByTagName("p")[0].textContent = output
+		if (eraseTypewriter) {
+			typewriter.value = ""
+			eraseTypewriter = false
+		}
 
 	}
 
 })
+
 
 
 function askQuestion(question) {
@@ -60,7 +89,7 @@ window.printResponse = function (message) {
 	document.getElementById("response").getElementsByTagName("p")[0].innerText = printout
 
 	let laughterPossibilities = ["Ha ha ha…", "Ha ha…", "Ha…"]
-	let laughterIndex = Math.floor(Math.random()*laughterPossibilities.length)
+	let laughterIndex = Math.floor(Math.random() * laughterPossibilities.length)
 	let laughterString = laughterPossibilities[laughterIndex]
 
 	let speechChanges = { "Interviewer: ": "\n", "Assistant: ": "\n", "Corita: ": "\n", "Student: ": "\n", "{laughter}": laughterString }
