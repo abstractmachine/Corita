@@ -1,5 +1,6 @@
 # Project-specific ingores
-gpt2/models/corita/model-2149.data-00000-of-00001
+gpt2/models/corita-old/model-2149.data-00000-of-00001
+gpt2/models/corita/model-997.data-00000-of-00001
 
 # Mac stuff
 
