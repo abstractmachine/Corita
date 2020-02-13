@@ -1,3 +1,5 @@
+let timeoutDuration = 300000 // 1000 = 1sec // 5 * 60 * 1000 = 5 minutes
+
 let firstClick = true
 document.body.addEventListener('click', function () {
 
@@ -14,7 +16,7 @@ document.body.addEventListener('click', function () {
 
 		setTimeout(function(){
 			window.location.reload(1);
-		 }, 300000); // 1000 = 1sec // 5 * 60 * 1000 = 5 minutes
+		 }, timeoutDuration); // 1000 = 1sec // 5 * 60 * 1000 = 5 minutes
 
 		return
 	}
