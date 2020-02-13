@@ -6,9 +6,16 @@ document.body.addEventListener('click', function () {
 	// erase current texts
 	document.getElementById("question").getElementsByTagName("p")[0].textContent = "Interviewer: …"
 	document.getElementById("response").getElementsByTagName("p")[0].textContent = "Corita: …"
+	// fill in texts
+	document.getElementById("instructions").getElementsByTagName("p")[0].textContent = "Click to talk. Type to write a question for Corita."
 
 	if (firstClick) {
 		firstClick = false
+
+		setTimeout(function(){
+			window.location.reload(1);
+		 }, 300000); // 1000 = 1sec // 5 * 60 * 1000 = 5 minutes
+
 		return
 	}
 	// start recording speech
