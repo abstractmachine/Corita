@@ -1,3 +1,4 @@
+let useRestartTimeout = true
 let timeoutDuration = 300000 // 1000 = 1sec // 5 * 60 * 1000 = 5 minutes
 
 let firstClick = true
@@ -11,17 +12,22 @@ document.body.addEventListener('click', function () {
 	// fill in texts
 	document.getElementById("instructions").getElementsByTagName("p")[0].textContent = "Click to talk. Type to write a question for Corita."
 
+	// if this is the first-click-to-activate microphone access (to reassure browser security)
 	if (firstClick) {
+		// turn off first-click flag
 		firstClick = false
-
-		setTimeout(function(){
-			window.location.reload(1);
-		 }, timeoutDuration); // 1000 = 1sec // 5 * 60 * 1000 = 5 minutes
-
+		// if we use a restart timer to reload the page every n seconds
+		if (useRestartTimeout) {
+			setTimeout(function () {
+				window.location.reload(1)
+			}, timeoutDuration) // 1000 = 1sec // 5 * 60 * 1000 = 5 minutes
+		}
+		// don't start the recording
 		return
+	} else {
+		// start recording speech
+		speechRecordStart()
 	}
-	// start recording speech
-	speechRecordStart()
 
 })
 
