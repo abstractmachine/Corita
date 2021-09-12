@@ -1,4 +1,4 @@
-Corita is an interactive-text-transformer-based professor, trained on the oral histories of the visual artist and professor [Corita Kent](https://en.wikipedia.org/wiki/Corita_Kent). Corita was developped for the semester project « [Libérer les énérgies créatrices](http://esaaix.fr/IMG/pdf/esaaix_livret__2019_2020__fevrier2_web_.pdf) » (p.30) at the [École supérieure d'art d'Aix-en-Provence](http://ecole-art-aix.fr).
+Corit.ai is an interactive-text-transformer-based professor, trained on the oral histories of the visual artist and professor [Corita Kent](https://en.wikipedia.org/wiki/Corita_Kent). Corita was developped for the semester project « [Libérer les énérgies créatrices](http://esaaix.fr/IMG/pdf/esaaix_livret__2019_2020__fevrier2_web_.pdf) » (p.30) at the [École supérieure d'art d'Aix-en-Provence](http://ecole-art-aix.fr).
 
 The project is best run on a Chrome browser, due to the use of the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API).
 
